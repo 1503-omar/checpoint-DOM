@@ -1,0 +1,37 @@
+FUNCTION produitsclaire(a,b:array_name : ARRAY_OF integer[3]) : return_type: pd :integer
+VAR
+    a,b : array_name : ARRAY_OF integer[3];
+    BEGIN
+    pd = a[0]*b[0]+a[1]*b[1]+a[2]*b[2]
+
+    
+    RETURN pd ;
+
+
+END
+
+// produitsclaire(a,b:array_name : ARRAY_OF integer[3];VAR: pd:integer)
+
+//pd = a[0]*b[0]+a[1]*b[1]+a[2]*b[2]
+
+PROCEDURE entré(n:INTEGER , VAR TAB: ARRAY_OF integer[3];  )
+VAR i: INTEGER
+    FOR i FROM 0 TO 2 STEP 1  DO
+
+    READ(TAB[i])
+END_FOR
+VAR 
+
+a,b:array_name : ARRAY_OF integer[3];
+
+n : integer 
+BEGIN
+entré (n,a)
+entré (n,b)
+produitsclaire(a,b)
+
+IF (pd= 0) THEN
+    write ("les 2 vecteurs sont orthogonaux")
+ELSE
+write (pd)
+END_IF
